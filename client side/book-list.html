@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <hr>
+        <div class="d-flex" style="justify-content: space-between;">
+        <h1>List of books</h1>
+        <div class=" btn btn-dark my-3">
+            <a style="text-decoration: none; color: white;" href="index.html">Add Book</a>
+        </div>
+        </div> 
+        <hr>
+        <div>
+            <div class="row" id="books">
+            </div>
+        </div>
+       
+    </div>
+
+   
+    
+    <div id="editBookModal" class="modal"  tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" onclick="cll()" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    
+                <div class="modal-body">
+                    <form id="editForm" method="POST">
+                        <div class="form-group">
+                            <label for="ISBN">ISBN</label>
+                            <input class="form-control"  name="isbn" id="isbn">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="Title">Title</label>
+                            <input class="form-control"  name="title" id="title">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Author">Author</label>
+                            <input class="form-control"  name="author" id="author">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="PublishedDate">Published Date</label>
+                            <input class="form-control" name="publish_date" id="publish_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Publisher">Publisher</label>
+                            <input class="form-control"  name="publisher" id="publisher">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="Pages">Number Of Pages</label>
+                            <input class="form-control"  name="numOfPages" id="numOfPages">
+                        </div>
+    
+                        
+    
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="book-list.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
